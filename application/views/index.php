@@ -496,14 +496,12 @@
             renderPage(currentPage);
         });
 
-        pdfContainer.addEventListener('wheel', (event) => {
+        pdfContainer.addEventListener('click', (event) => {
             event.preventDefault();
-            if (event.deltaY < 0) {
-                scale += 0.1;
+            if (scale <= 1.0) {
+                scale += 0.5;
             } else {
-                if (scale > 0.2) {
-                    scale -= 0.1;
-                }
+                scale -= 0.5;
             }
             renderPage(currentPage);
         });
