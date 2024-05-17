@@ -79,6 +79,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: zoom-in;
         }
 
         /* Custom scrollbar */
@@ -429,7 +430,6 @@
     <script>
         const url = '<?php echo base_url('assets/embom.pdf') ?>'; // Ganti dengan URL PDF Anda
 
-
         const pdfjsLib = window['pdfjs-dist/build/pdf'];
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
 
@@ -462,11 +462,13 @@
 
             await page.render(renderContext).promise;
 
-            // Adjust container scrollbars
+            // Adjust container scrollbars and cursor
             if (scale > 1.0) {
                 pdfContainer.style.overflow = 'auto';
+                pdfContainer.style.cursor = 'zoom-out'; // Change cursor to zoom-out
             } else {
                 pdfContainer.style.overflow = 'hidden';
+                pdfContainer.style.cursor = 'zoom-in'; // Change cursor to zoom-in
             }
 
             console.log(`Page ${pageNum} rendered`);
