@@ -58,8 +58,9 @@
 
     <?php $this->load->view('components/evaluasi'); ?>
 
+
     <!-- Portfolio-->
-    <div id="portfolio">
+    <!-- <div id="portfolio">
         <div class="container-fluid p-0">
             <div class="row g-0">
                 <div class="col-lg-4 col-sm-6">
@@ -91,13 +92,16 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+    <?php $this->load->view('components/profile'); ?>
     <!-- Contact-->
-    <!-- Footer-->
+    <!-- Footer -->
     <footer class="bg-light py-5">
         <div class="container px-4 px-lg-5">
-            <div class="small text-center text-muted">
-                E-MBOM
+            <div class="text-center text-muted">
+                <p class="mb-2">E-MBOM: Elektronik Modul Batik Organik Mangrove</p>
+                <p class="mb-2">Menggabungkan Tradisi Batik Indonesia dengan Inovasi Teknologi dan Keberlanjutan Lingkungan</p>
+                <p class="mb-0">&copy; 2024 E-MBOM. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
